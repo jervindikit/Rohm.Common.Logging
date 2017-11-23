@@ -29,7 +29,7 @@ namespace Test
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             if (textBoxFunctionName.Text != "" && comboBoxTypeStatus.Text != "" &&
                 textBoxFrom.Text != "" && textBoxTo.Text != "" &&
@@ -60,15 +60,20 @@ namespace Test
             c_InputValue.LogFileName = comboBoxLogFileName.Text;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             label8.Text = dateTimePicker1.Value.ToString("yyyymmdd_hhmmss");
             label9.Text = dateTimePicker2.Value.ToString("yyyyMMdd_HHmmss");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             //InputValue.LogTest("THIS IS A TEST LOG");
+        }
+
+        private void Button3_Click_1(object sender, EventArgs e)
+        {
+            Logger.OperationLogger.Write(12, "FUNCTION_TEST", "TYPE_TEST", "FROM", "TO", "0ms", "FUNCTION_NUMBER", "THIS SAMPLE TEXT 1", "THIS IS SAMPLE TEXT 2");
         }
     }
 }
